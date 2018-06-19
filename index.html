@@ -48,8 +48,20 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-
-
+	<style>
+	@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
+	</style>
+	<script>
+		
+		var say=["你必須非常努力，才能相信自己真的是無能為力","雖然我長得醜，但是買了漂亮衣服後，我就可以醜得漂亮","努力不一定會成功，但是不努力，一定會很輕鬆！","醜小鴨變成白天鵝，並不是因為它有多努力，而是他父母就是白天鵝","只要堅持下去，就一定會有幸運發生在別人身上！","跌倒了沒關係，只要爬起來，你會再跌一次。","雖然你長的醜，但你想的美"];
+		function start(){
+			var random;
+			random=Math.floor(Math.random()*7);
+			console.log(random);
+			document.getElementById("saying").innerHTML=say[random];
+		}
+		window.addEventListener("load",start,false);
+	</script>
 	</head>
 	<body>
 		
@@ -88,12 +100,12 @@
 				<div class="col-md-8 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" >
-							<h1>魚干女教戰手則</h1>
+							<h1 style="font-family: ‘cwTeXYen’, sans-serif;">魚干女教戰手則</h1>
 							<h2 style="color:rgba(153,217,234,0.7)">Are you ready?</h2>
 							<div class="simply-countdown <!--simply-countdown-one-->"></div>
 							<p><a href="test1.html" class="btn btn-default btn-sm">Start</a></p>
 							<br><br><br><br>
-							<h2>hi</h2>
+							<h2 id="saying" style="font-family: ‘cwTeXYen’, sans-serif;"></h2>
 						</div>
 					</div>
 				</div>
