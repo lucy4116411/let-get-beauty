@@ -62,6 +62,7 @@
 				$("#choose").show();
 				$("#mainImg").attr("src","images/0.jpg");
 				$("#mainImg").attr("usemap","mkmap0");
+				num=0;
 			});
 			$("#pic1").click(function(){
 				$(".container").hide();
@@ -69,6 +70,7 @@
 				$("#choose").show();
 				$("#mainImg").attr("src","images/1.jpg");
 				$("#mainImg").attr("usemap","mkmap1");
+				num=1;
 			});
 			$("#pic2").click(function(){
 				$(".container").hide();
@@ -77,7 +79,6 @@
 				$("#mainImg").attr("src","images/2.jpg");
 				$("#mainImg").attr("usemap","mkmap2");
 				num=2;
-				console.log(num);
 			});
 			$("#pic3").click(function(){
 				$(".container").hide();
@@ -227,9 +228,9 @@
 			//進入下一頁
 			$("#choose").click(function(){
 				if(num==0){location.href="test2_EU.html";};
-				if(num==1){location.href="index.html";};
+				if(num==1){location.href="test2_KR.html";};
 				if(num==2){location.href="test2_JP.html";};
-				if(num==3){location.href="index.html";};
+				if(num==3){location.href="test2_SP.html";};
 			});
 			
 		});
