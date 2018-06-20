@@ -1,10 +1,12 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>3Dtest2</title>
-	  <link href = 'http://fonts.googleapis.com/css?family=Calligraffitti'
-         rel = 'stylesheet' type='text/css'>
+		<title>Let's Get Beauty - EU</title>
+	 
 		<style>
+		@font-face {
+                font-family: "Calligraffitti";
+                src: url("css/Calligraffitti-Regular.ttf");}
 		 body { background-color: rgba(222, 241, 245,0.8); 
 			 text-align:center;
 		   }
@@ -124,7 +126,6 @@
 		}
 		.hdisplay {
 		    display : block;
-			color :#87BFC6;
 		}
 		.imgOfBox{
 			position:relative; 
@@ -138,6 +139,11 @@
 		.imgOfBox img{
 			opacity: 1.5;
 		}
+		p   {
+		    font-family:Calligraffitti;
+			position:absolute;
+			
+		}
 #left:checked ~ .view .box {transform: rotateY(90deg);}
 #right:checked ~ .view .box {transform: rotateY(-90deg);}
 #top:checked ~ .view .box {transform: rotateX(-90deg);}
@@ -150,9 +156,32 @@
 		$(document).ready(function(){
         $("label").fadeIn(1000);
 		$("#views").fadeIn(2000);
+        $("h2").css("color","#87BFC6");
         });
-	  //console.log ("#views");
+	  function start()
+		{	
+		go.addEventListener("click" ,background,false);
+		goBox.addEventListener("click" ,Boxbackground,false);
+		}
+		function background()
+		{
+		    document.getElementById("thebody").style.background=document.getElementById("BodyColor").value;
+		}
+		function Boxbackground()
+		{
+		    boxes = document.getElementsByClassName("face");
+			for(var i =0 ;i < boxes.length; i++)
+		     boxes[i].setAttribute("style","background-color :"+document.getElementById("BoxColor").value+";");
+			hs = document.getElementsByTagName("h2");
+			for(var j =0 ;j < hs.length; j++)
+		     hs[j].setAttribute("class","color :"+document.getElementById("BoxColor").value+";");
+			 
+		}
 	  $(function () {
+	  
+	  $("#goBox").click(function(){
+	      $("h2").css("color",document.getElementById('BoxColor').value);
+	   });
       $("label").mouseover(function () {
         $("h2").attr("class","hdisplay");
         });
@@ -237,6 +266,7 @@
 			$(".box_back ").css("overflow-y","auto");
 	   });
 	});
+	window.addEventListener( "load", start, false );
 	/*var boxs=document.getElementById('box');
     var x=0,y=0;
     ////////////////////////鍵盤控制    
@@ -260,7 +290,13 @@
 	    
 		</script>
 	</head>
-	<body>
+	<body id="thebody">
+	    <form action = "#">
+	    <input id="BodyColor" type="color" value="#FFFFCC" style="display:block; top:555px; margin-left:1100px;"/>
+		<p id="go"  style=" top:540px; margin-left:1160px;">Change Background Color</p>
+		<input id="BoxColor" type="color" value="#FFFFCC" style="display:block; top:590px; margin-left:1100px;"/>
+		<p id="goBox" style=" top:575px; margin-left:1160px;">Change Box Color</p>
+		</form>
 	    <h1 id="goback" style=" position:absolute;margin:top left; top:5%; left:6%;cursor:pointer;font-family : Calligraffitti;">&larr; GoBack</h1>
 		<input type="radio" name="select" id="front" value=""/>
 		<label for="front" class="text" style = "display:none;"><img src="images/lips.png" width="80"
@@ -296,93 +332,93 @@
 			<div id = "boxs" class="box" >
 				<div id = "boxfront" class="face box_front" style="overflow-y:auto;">	
 					<div class="imgOfBox" id="imglips" >
-					    <a href="https://www.youtube.com/watch?v=LDSwW8etxZA" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/LDSwW8etxZA/mqdefault_6s.webp?du=3000&sqp=CIDeo9kF&rs=AOn4CLB8wme9bvvYlYzbijKBpGX-v7OgDg" width="150"
+					    <a href="https://www.youtube.com/watch?v=LDSwW8etxZA" target="_blank" id = "01"><img src="images/eulips01.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=4luY_RZ1aeU" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/4luY_RZ1aeU/mqdefault_6s.webp?du=3000&sqp=CLXAo9kF&rs=AOn4CLAK9maRKmduASGg17Rf1wkNpTTvWg" width="150"
+						<a href="https://www.youtube.com/watch?v=4luY_RZ1aeU" target="_blank" id = "01"><img src="images/eulips02.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=MPb_9TLzSNY" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/MPb_9TLzSNY/mqdefault_6s.webp?du=3000&sqp=CNK5o9kF&rs=AOn4CLBdmfFIynBB_N8pzLPmAiwFENHznw" width="150"
+						<a href="https://www.youtube.com/watch?v=MPb_9TLzSNY" target="_blank" id = "01"><img src="images/eulips03.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=4IfBBuctkx4" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/4IfBBuctkx4/mqdefault_6s.webp?du=3000&sqp=CObjo9kF&rs=AOn4CLBXd4T_giEc4BIjvMcrMsTgB4bdHg" width="150"
+						<a href="https://www.youtube.com/watch?v=4IfBBuctkx4" target="_blank" id = "01"><img src="images/eulips04.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=DamJ_40JWwc" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/DamJ_40JWwc/mqdefault_6s.webp?du=3000&sqp=CIvQo9kF&rs=AOn4CLBvKJKHamY17GkCga6IQpYqgw5rCA" width="150"
+						<a href="https://www.youtube.com/watch?v=DamJ_40JWwc" target="_blank" id = "01"><img src="images/eulips05.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=fE_iG236jT0" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/fE_iG236jT0/mqdefault_6s.webp?du=3000&sqp=CMLWo9kF&rs=AOn4CLC9UjKrRpxTnJYtL6N6n2MQgdqTNg" width="150"
+						<a href="https://www.youtube.com/watch?v=fE_iG236jT0" target="_blank" id = "01"><img src="images/eulips06.webp" width="150"
 			             height="90" alt="Photo1" ></a>
 					</div>
 				</div>
 				<div id = "boxleft" class="face box_left" >
 						<div class="imgOfBox" id= "imgbronzer">
-					    <a href="https://www.youtube.com/watch?v=s_OzUKSLA0U" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/s_OzUKSLA0U/mqdefault_6s.webp?du=3000&sqp=CN3so9kF&rs=AOn4CLDMsOLp7zhBsYqSQVHjGX7dJAXfrg" width="150"
+					    <a href="https://www.youtube.com/watch?v=s_OzUKSLA0U" target="_blank" id = "01"><img src="images/eubronzer01.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=t0vS-VGbryE" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/t0vS-VGbryE/mqdefault_6s.webp?du=3000&sqp=COSzo9kF&rs=AOn4CLCRjwl2gn0MeIAdNILvSg_ahjuhwA" width="150"
+						<a href="https://www.youtube.com/watch?v=t0vS-VGbryE" target="_blank" id = "01"><img src="images/eubronzer02.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=xVu1fqXLsEc" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/xVu1fqXLsEc/mqdefault_6s.webp?du=3000&sqp=CIXpo9kF&rs=AOn4CLDvWWlUR8uk1drx8c4SNKobGKVYoQ" width="150"
+						<a href="https://www.youtube.com/watch?v=xVu1fqXLsEc" target="_blank" id = "01"><img src="images/eubronzer03.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=Q5fBhNZJXzU" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/Q5fBhNZJXzU/mqdefault_6s.webp?du=3000&sqp=CPvbo9kF&rs=AOn4CLCQz_4psF9jv4hvyXS4plMom--iHQ" width="150"
+						<a href="https://www.youtube.com/watch?v=Q5fBhNZJXzU" target="_blank" id = "01"><img src="images/eubronzer04.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=LwGogHTLY1A" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/LwGogHTLY1A/mqdefault_6s.webp?du=3000&sqp=CKDJo9kF&rs=AOn4CLAeU3qRBMtCl9cilLlKcJh1NcvU-A" width="150"
+						<a href="https://www.youtube.com/watch?v=LwGogHTLY1A" target="_blank" id = "01"><img src="images/eubronzer05.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=36MOhIFW75o" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/36MOhIFW75o/mqdefault_6s.webp?du=3000&sqp=CJbMo9kF&rs=AOn4CLC9FE8L1lwhBbkMk70Kahoq6jBUXg" width="150"
+						<a href="https://www.youtube.com/watch?v=36MOhIFW75o" target="_blank" id = "01"><img src="images/eubronzer06.webp" width="150"
 			             height="90" alt="Photo1" ></a>
 					</div>
 					</div>
 				<div id = "boxright" class="face box_right" >
                     <div class="imgOfBox"  id="imgblush">
-					    <a href="https://www.youtube.com/watch?v=eo0ncN28cs8" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/eo0ncN28cs8/mqdefault_6s.webp?du=3000&sqp=COHCo9kF&rs=AOn4CLBly-e6zjT2OLiyGQp6Y4YrgRJ9Kg" width="150"
+					    <a href="https://www.youtube.com/watch?v=eo0ncN28cs8" target="_blank" id = "01"><img src="images/eublush01.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=Od2kVrtu5_o" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/Od2kVrtu5_o/mqdefault_6s.webp?du=3000&sqp=CITvo9kF&rs=AOn4CLBNC1OfQkIkubNmpRJWg8BL-J8D8Q" width="150"
+						<a href="https://www.youtube.com/watch?v=Od2kVrtu5_o" target="_blank" id = "01"><img src="images/eublush02.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=u3Ph6tPZ_Uo" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/u3Ph6tPZ_Uo/mqdefault_6s.webp?du=3000&sqp=CLLho9kF&rs=AOn4CLBO_1q5dLWRsSN2AtNHFRX2lUZTTA" width="150"
+						<a href="https://www.youtube.com/watch?v=u3Ph6tPZ_Uo" target="_blank" id = "01"><img src="images/eublush03.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=0agq6aSGSDE" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/0agq6aSGSDE/mqdefault_6s.webp?du=3000&sqp=CMbMo9kF&rs=AOn4CLAwxeYsYi1AEnfkeufQfNZIXCJi_A" width="150"
+						<a href="https://www.youtube.com/watch?v=0agq6aSGSDE" target="_blank" id = "01"><img src="images/eublush04.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=aTqQrAcpq0c" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/aTqQrAcpq0c/mqdefault_6s.webp?du=3000&sqp=CNrUo9kF&rs=AOn4CLCmtlSzDWivr3vpNsRRwslidK_MSQ" width="150"
+						<a href="https://www.youtube.com/watch?v=aTqQrAcpq0c" target="_blank" id = "01"><img src="images/eublush05.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=mKYMERSFIbo" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/mKYMERSFIbo/mqdefault_6s.webp?du=3000&sqp=CObxo9kF&rs=AOn4CLD6uz8Kbd6mI5bdKgir-ANIsX3MrQ" width="150"
+						<a href="https://www.youtube.com/watch?v=mKYMERSFIbo" target="_blank" id = "01"><img src="images/eublush06.webp" width="150"
 			             height="90" alt="Photo1" ></a>
 					</div>
 			</div>
 				<div id = "boxtop" class="face box_top">
 				<div class="imgOfBox"  id="imgeyebrow">
-					    <a href="https://www.youtube.com/watch?v=ZmWwZ3VFA0Y" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/ZmWwZ3VFA0Y/mqdefault_6s.webp?du=3000&sqp=CLLGotkF&rs=AOn4CLAc377gmEL7QLtzCUClyYeZ843hSw" width="150"
+					    <a href="https://www.youtube.com/watch?v=ZmWwZ3VFA0Y" target="_blank" id = "01"><img src="images/eueyebrow01.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=LgepzZZz9Is" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/LgepzZZz9Is/mqdefault_6s.webp?du=3000&sqp=CLSQo9kF&rs=AOn4CLAna6NY0FV5XUQLNq7NvyYv5ZLlag" width="150"
+						<a href="https://www.youtube.com/watch?v=LgepzZZz9Is" target="_blank" id = "01"><img src="images/eueyebrow02.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=We9vugTA2sc" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/We9vugTA2sc/mqdefault_6s.webp?du=3000&sqp=CI-Jo9kF&rs=AOn4CLAkmbwMhhmYThug1CcJm_-Wx696QQ" width="150"
+						<a href="https://www.youtube.com/watch?v=We9vugTA2sc" target="_blank" id = "01"><img src="images/eueyebrow03.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=DXyWeGZxYck" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/DXyWeGZxYck/mqdefault_6s.webp?du=3000&sqp=CLvEpNkF&rs=AOn4CLCZeH1_aYeS6IfuRiyj6_kE901gQQ" width="150"
+						<a href="https://www.youtube.com/watch?v=DXyWeGZxYck" target="_blank" id = "01"><img src="images/eueyebrow04.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=2MWNIUXTxho" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/2MWNIUXTxho/mqdefault_6s.webp?du=3000&sqp=CICmo9kF&rs=AOn4CLCpb-cgQlVLME8Re6KWOiaF_BYTtA" width="150"
+						<a href="https://www.youtube.com/watch?v=2MWNIUXTxho" target="_blank" id = "01"><img src="images/eueyebrow05.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=SWVY8Ff7CDQ" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/SWVY8Ff7CDQ/mqdefault_6s.webp?du=3000&sqp=COC2pNkF&rs=AOn4CLCs74Wh4XtgzSC1_7wzOVeXwpa8Nw" width="150"
+						<a href="https://www.youtube.com/watch?v=SWVY8Ff7CDQ" target="_blank" id = "01"><img src="images/eueyebrow06.webp" width="150"
 			             height="90" alt="Photo1" ></a>
 					</div>
 				</div>
 				<div id = "boxbottom" class="face box_bottom">
 				<div class="imgOfBox"  id="imgeyeshadow">
-					    <a href="https://www.youtube.com/watch?v=9MKnWGTbySw" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/9MKnWGTbySw/mqdefault_6s.webp?du=3000&sqp=CLzBo9kF&rs=AOn4CLDfDY-IcRsyXXqJ18Pyms0rHh2a5Q" width="150"
+					    <a href="https://www.youtube.com/watch?v=9MKnWGTbySw" target="_blank" id = "01"><img src="images/eueyeshadow01.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=N9WK7fD_UHc" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/N9WK7fD_UHc/mqdefault_6s.webp?du=3000&sqp=CJreo9kF&rs=AOn4CLBvXOD5hsEunvfAz9xDit8HCT6p5g" width="150"
+						<a href="https://www.youtube.com/watch?v=N9WK7fD_UHc" target="_blank" id = "01"><img src="images/eueyeshadow02.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=cLZLStVdHzo" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/cLZLStVdHzo/mqdefault_6s.webp?du=3000&sqp=CO7no9kF&rs=AOn4CLBa4mgsOKvou28_GDJTv5j5NthQTA" width="150"
+						<a href="https://www.youtube.com/watch?v=cLZLStVdHzo" target="_blank" id = "01"><img src="images/eueyeshadow03.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=0vSRvivZOq0" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/0vSRvivZOq0/mqdefault_6s.webp?du=3000&sqp=CNzZo9kF&rs=AOn4CLAIK2tdYi9L00eocm8yRMO6FzN5Hg" width="150"
+						<a href="https://www.youtube.com/watch?v=0vSRvivZOq0" target="_blank" id = "01"><img src="images/eueyeshadow04.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=S5UREB28PWs" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/S5UREB28PWs/mqdefault_6s.webp?du=3000&sqp=CL-mo9kF&rs=AOn4CLAIwGQtXu9wFZHrXo1h2yIlePr50A" width="150"
+						<a href="https://www.youtube.com/watch?v=S5UREB28PWs" target="_blank" id = "01"><img src="images/eueyeshadow05.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=IjLG2h4wKFk" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/IjLG2h4wKFk/mqdefault_6s.webp?du=3000&sqp=CMrho9kF&rs=AOn4CLApf3PQcpVX1ZJITWmWi4oLsq2sfA" width="150"
+						<a href="https://www.youtube.com/watch?v=IjLG2h4wKFk" target="_blank" id = "01"><img src="images/eueyeshadow06.webp" width="150"
 			             height="90" alt="Photo1" ></a>
 					</div>
 				</div>
 				<div id = "boxback" class="face box_back">
 				<div class="imgOfBox"  id="imgfundation">
-					    <a href="https://www.youtube.com/watch?v=0JES5d2Zl9I" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/0JES5d2Zl9I/mqdefault_6s.webp?du=3000&sqp=CN7qo9kF&rs=AOn4CLC3WP0XB0AEZMIA49QkYT2kQAEnAA" width="150"
+					    <a href="https://www.youtube.com/watch?v=0JES5d2Zl9I" target="_blank" id = "01"><img src="images/eufund01.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=8SHotKNhUxc" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/8SHotKNhUxc/mqdefault_6s.webp?du=3000&sqp=CPHYo9kF&rs=AOn4CLDTLZn5KilFCisk0pvFpZbtW7Yssw" width="150"
+						<a href="https://www.youtube.com/watch?v=8SHotKNhUxc" target="_blank" id = "01"><img src="images/eufund02.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=0s-4jHAn_7Y" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/0s-4jHAn_7Y/mqdefault_6s.webp?du=3000&sqp=CP7ro9kF&rs=AOn4CLBqPhWtdewt1y8qX5EsKmj50-Va2g" width="150"
+						<a href="https://www.youtube.com/watch?v=0s-4jHAn_7Y" target="_blank" id = "01"><img src="images/eufund03.webp" width="150"
 			             height="90" alt="Photo1" ></a>
-						<a href="https://www.youtube.com/watch?v=zsGyamWLshc" target="_blank" id = "01"><img src="https://i.ytimg.com/an_webp/zsGyamWLshc/mqdefault_6s.webp?du=3000&sqp=COnio9kF&rs=AOn4CLCmRGd104umw2isAR-wFoEPm13w-Q" width="150"
+						<a href="https://www.youtube.com/watch?v=zsGyamWLshc" target="_blank" id = "01"><img src="images/eufund04.webp" width="150"
 			             height="90" alt="Photo1" ></a>
 						
 					</div>

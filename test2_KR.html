@@ -1,15 +1,17 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Let's Get Beauty - JP</title>
-	 
+		<title>Let's Get Beauty - KR</title>
+	  
 		<style>
-		 body { background-color: rgba(222, 241, 245,0.8); 
-			 text-align:center;
-		   }
 		@font-face {
                 font-family: "Calligraffitti";
                 src: url("css/Calligraffitti-Regular.ttf");}
+
+		body { 
+		     background-color: rgba(222, 241, 245,0.8); 
+			 text-align:center;
+		   }
         input{display: none;
           z-index: 1;
 	      top: 0px;
@@ -63,7 +65,7 @@
 	        position: absolute;
 	    	background-color: #87BFC6;
 	    	line-height: 450px;
-	    	opacity: 0.8;
+	    	opacity: 0.96;
 	    }
 
 	    .box_front{
@@ -155,7 +157,7 @@
 		$(document).ready(function(){
         $("label").fadeIn(1000);
 		$("#views").fadeIn(2000);
-        $("h2").css("color","#87BFC6");
+		$("h2").css("color","#87BFC6");
         });
 	  function start()
 		{	
@@ -192,7 +194,6 @@
 			$("#boxs").show();
 			$("#goback").show();
 	   });
-
 	   /*$("#imgOfBox1 img").click(function(){
 			$("#boxs").hide();
 			$("#showa").show();
@@ -265,7 +266,7 @@
 			$(".box_back ").css("overflow-y","auto");
 	   });
 	});
-	window.addEventListener( "load", start, false );
+    window.addEventListener( "load", start, false );
 	/*var boxs=document.getElementById('box');
     var x=0,y=0;
     ////////////////////////鍵盤控制    
@@ -296,7 +297,9 @@
 		<input id="BoxColor" type="color" value="#FFFFCC" style="display:block; top:590px; margin-left:1100px;"/>
 		<p id="goBox" style=" top:575px; margin-left:1160px;">Change Box Color</p>
 		</form>
-	     <h1 id="goback" style=" position:absolute;margin:top left; top:5%; left:6%;cursor:pointer;font-family : Calligraffitti;">&larr; GoBack</h1>
+		<h1 id="goback" style=" position:absolute;margin:top left; top:5%; left:6%;cursor:pointer;font-family : Calligraffitti;">&larr; GoBack</h1>
+		<input type="radio" name="select" id="front" value=""/>
+
 		<input type="radio" name="select" id="front" value=""/>
 		<label for="front" class="text" style = "display:none;"><img src="images/lips.png" width="80"
 			height="80" alt="Photo1"  style="margin-top :100; margin-left:80;"><h2 style="margin-top :-50; margin-left:170;">Lips</h2></label>
@@ -323,55 +326,107 @@
 		
 		<div class="btn"></div>
 		
-		<div id ="showa" style="display:none;" style = "right = '600'"><iframe src=""  width = "750px"  height="550px">
+		<div id ="showa" style="display:none;" style = "right = '600'"><iframe src="https://www.google.com.tw/"  width = "750px"  height="550px">
         </iframe>
         </div>
 		<div id = "views" class="view" style = "display:none;">
 			
 			<div id = "boxs" class="box" >
 				<div id = "boxfront" class="face box_front" style="overflow-y:auto;">	
-					<div class="imgOfBox"  >
-						<a href="https://www.beauty321.com/post/7930" target="_blank" ><img src="images/JP_mouth1.jpg" width="150" height="90"/></a>
-						<a href="https://read01.com/zh-tw/LMyEx4.html#.WyjulaczY2w" target="_blank"><img  src="images/JP_mouth2.PNG" width="150" height="90"/></a>
-						<a href="https://www.youtube.com/watch?v=LxdxtxEHMWg" target="_blank"><img  src="images/jplips01.webp" width="150" height="90"/></a>				
-						<a href="https://www.youtube.com/watch?v=7HtDKFO8Os4" target="_blank"><img  src="images/jplips02.webp" width="150" height="90"/></a>
+					<div class="imgOfBox" id="imglips" >
+					    <a href="https://www.youtube.com/watch?v=4yZPcU2XRuQ" target="_blank" id = "01"><img src="images/krlips01.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=YI_AbjzQ1tY" target="_blank" id = "01"><img src="images/krlips02.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=lsvANz5I7KQ" target="_blank" id = "01"><img src="images/krlips03.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=HNfZN7lHugs&t=114s" target="_blank" id = "01"><img src="images/krlips04.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=YYvHfYQ3pFw" target="_blank" id = "01"><img src="images/krlips05.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=fzZoclImbkU" target="_blank" id = "01"><img src="images/krlips06.webp" width="150"
+			             height="90" alt="Photo1" ></a>
 					</div>
 				</div>
-				<div id = "boxleft" class="face box_left" >  
-				</div>
+				<div id = "boxleft" class="face box_left" >
+						<div class="imgOfBox" id= "imgbronzer">
+					    <a href="https://www.youtube.com/watch?v=Lwn-f1CNKJA" target="_blank" id = "01"><img src="images/krbronzer01.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=5TiPlGgEizI" target="_blank" id = "01"><img src="images/krbronzer02.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=zgjy2TJJ1kQ" target="_blank" id = "01"><img src="images/krbronzer03.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.marieclaire.com.tw/beauty/make-up/15752/page_7" target="_blank" id = "01"><img src="images/krbronzer1.jpg" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=zLSPHElGZLU" target="_blank" id = "01"><img src="images/krbronzer05.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=-fFQhr0eMY0" target="_blank" id = "01"><img src="images/krbronzer06.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+					</div>
+					</div>
 				<div id = "boxright" class="face box_right" >
-					<div class="imgOfBox"  >
-						<a href="https://www.youtube.com/watch?v=DM0GTUR6Uwk&t=149s" target="_blank" ><img src="images/jpblush01.webp" width="150" height="90"/></a>
-						<a href="https://www.youtube.com/watch?v=RFos8DJmh0k" target="_blank"><img  src="images/jpblush02.webp" width="150" height="90"/></a>
-						<a href="http://nataliepink.pixnet.net/blog/post/49460406-%E2%99%A5%E6%84%9B%E6%BC%82%E4%BA%AE%E2%99%A5%E9%80%99%E6%A8%A3%E5%8C%96%E5%B0%B1%E5%B0%8D%E4%BA%86%EF%BC%81%EF%BC%81%E6%97%A5%E7%B3%BB%E5%A4%A7%E7%9C%BC%E5%A6%9D%E6%94%BB%E7%95%A5" target="_blank"><img  src="images/JP_eye_art3.jpg" width="150" height="90"/></a>				
-						<a href="https://www.youtube.com/watch?v=5Rhl_-aPoPk" target="_blank"><img  src="images/JP_eye_vid1.PNG" width="150 height="90"/></a>
+                    <div class="imgOfBox"  id="imgblush">
+					    <a href="https://www.youtube.com/watch?v=38mHN7KZYuE" target="_blank" id = "01"><img src="images/krblush01.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=KgfdmlXFQpQ" target="_blank" id = "01"><img src="images/krblush02.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=JBSQMWH_sUw&t=15s" target="_blank" id = "01"><img src="images/krblush03.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="http://www.look-in.com.tw/channel/article/3088" target="_blank" id = "01"><img src="images/krblush.jpg" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.elle.com/tw/beauty/make-up/g28813/2017-powder-cheeks-cosmetics-tips/?slide=6" target="_blank" id = "01"><img src="images/krblush2.jpg" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://fgblog.fashionguide.com.tw/11730/posts/303868-%E9%9F%93%E5%9C%8B%E7%BE%8E%E5%A6%9D%E9%83%A8%E8%90%BD%E5%AE%A2%E5%82%B3%E6%8E%886%E5%A4%A7%E8%85%AE%E7%B4%85%E7%95%AB%E6%B3%95-%E6%89%93%E9%80%A0%E6%9C%80%E5%A4%AF%E3%80%8C%E6%BC%B8%E5%B1%A4%E5%BE%AE%E9%86%BA%E3%80%8D%E6%8A%80%E5%B7%A7%E5%A4%A7%E5%85%AC%E9%96%8B" target="_blank" id = "01"><img src="images/krblush3.jpg" width="150"
+			             height="90" alt="Photo1" ></a>
 					</div>
-				</div>
+			</div>
 				<div id = "boxtop" class="face box_top">
-					<div class="imgOfBox"  >
-						<a href="https://kknews.cc/zh-tw/news/92q4r8b.html" target="_blank" ><img src="images/JP_brow_art1.PNG" width="130" height="90"/></a>
-						<a href="https://www.youtube.com/watch?v=LspTL6o0Z3Q" target="_blank"><img  src="images/jpeyebrow01.webp" width="150" height="90"/></a>
-						<a href="https://www.youtube.com/watch?v=QprralG0Gbo" target="_blank"><img  src="images/jpeyebrow02.webp" width="150" height="90"/></a>				
-						<a href="https://www.youtube.com/watch?v=0nhCOkSbBZ4" target="_blank"><img  src="images/jpeyebrow03.webp" width="150" height="90"/></a>
+				<div class="imgOfBox"  id="imgeyebrow">
+					    <a href="https://www.youtube.com/watch?v=akYUGeNfoNE" target="_blank" id = "01"><img src="images/kreyebrow01.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=0US3c9ZpzwY" target="_blank" id = "01"><img src="images/kreyebrow02.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=Jo6OGhV3x5k" target="_blank" id = "01"><img src="images/kreyebrow03.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=dAdn35hHbbY" target="_blank" id = "01"><img src="images/kreyebrow04.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=E7ps8SewLUQ" target="_blank" id = "01"><img src="images/kreyebrow05.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=_H0czN2Zx3U" target="_blank" id = "01"><img src="images/kreyebrow06.webp" width="150"
+			             height="90" alt="Photo1" ></a>
 					</div>
 				</div>
 				<div id = "boxbottom" class="face box_bottom">
-					<div class="imgOfBox"  >
-						<a href="https://girls.presslogic.com/2017/01/16/article/64667/" target="_blank" ><img src="images/JP_eye_art1.png" width="150" height="90"/></a>
-						<a href="http://www.look-in.com.tw/channel/article/7311" target="_blank"><img  src="images/JP_eye_art2.png" width="150" height="90"/></a>
-						<a href="http://nataliepink.pixnet.net/blog/post/49460406-%E2%99%A5%E6%84%9B%E6%BC%82%E4%BA%AE%E2%99%A5%E9%80%99%E6%A8%A3%E5%8C%96%E5%B0%B1%E5%B0%8D%E4%BA%86%EF%BC%81%EF%BC%81%E6%97%A5%E7%B3%BB%E5%A4%A7%E7%9C%BC%E5%A6%9D%E6%94%BB%E7%95%A5" target="_blank"><img  src="images/JP_eye_art3.jpg" width="130" height="90"/></a>				
-						<a href="https://www.youtube.com/watch?v=5Rhl_-aPoPk" target="_blank"><img  src="images/JP_eye_vid1.PNG" width="150" height="90"/></a>
+				<div class="imgOfBox"  id="imgeyeshadow">
+					    <a href="https://www.youtube.com/watch?v=UncgPBXhv8c" target="_blank" id = "01"><img src="images/kreyeshadow01.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=4poZEQHzhwA" target="_blank" id = "01"><img src="images/kreyeshadow02.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=1pkUAEWhjl8" target="_blank" id = "01"><img src="images/kreyeshadow03.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=Sjrsx_SJyJ4" target="_blank" id = "01"><img src="images/kreyeshadow04.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=dlCcRKwAgYE&t=4s" target="_blank" id = "01"><img src="images/kreyeshadow05.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=dE-RmAZ-3ZA" target="_blank" id = "01"><img src="images/kreyeshadow06.webp" width="150"
+			             height="90" alt="Photo1" ></a>
 					</div>
 				</div>
 				<div id = "boxback" class="face box_back">
-					<div class="imgOfBox"  >
-						<a href="https://www.youtube.com/watch?v=IPnxqTDaw2o" target="_blank" ><img src="images/jpfund01.webp" width="150" height="90"/></a>
-						<a href="https://www.youtube.com/watch?v=s9p77HEiObo" target="_blank"><img  src="images/jpfund02.webp" width="150" height="90"/></a>
-						<a href="https://www.youtube.com/watch?v=F7K2LabDIdk" target="_blank"><img  src="images/jpfund03.webp" width="150" height="90"/></a>				
-						<a href="https://www.youtube.com/watch?v=zIiQeVlNNkM" target="_blank"><img  src="images/jpfund04.webp" width="150" height="90"/></a>
+				<div class="imgOfBox"  id="imgfundation">
+					    <a href="https://www.youtube.com/watch?v=NFVWg0CyES0&t=41s" target="_blank" id = "01"><img src="images/krfun01.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=yfyyhdQNPBo" target="_blank" id = "01"><img src="images/krfun02.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=FCCoXMddmF0" target="_blank" id = "01"><img src="images/krfun03.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						<a href="https://www.youtube.com/watch?v=da1CtaJZUME" target="_blank" id = "01"><img src="images/krfun04.webp" width="150"
+			             height="90" alt="Photo1" ></a>
+						
 					</div>
 				</div>
 			</div>
 		</div>
+		
 	</body>
 </html>
